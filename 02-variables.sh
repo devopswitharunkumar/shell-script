@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PERSON1=Ramesh  
+PERSON1=Ramesh
 PERSON2=Suresh
 
 echo "$PERSON1 : Hello $PERSON2, Good Morning"
@@ -50,3 +50,17 @@ echo "$PERSON2 : thanks $PERSON1, Will meet again Bye Bye"
 # Single Quotes 
 # echo 'Today is $(date)'   ---> Output: Today is $(date)
 
+#space related example:
+# FOR DOUBLE QUOTES AND SINGLE QUOTES
+# CORRECT WAY 
+# PERSON1="Ramesh KUMAR"  
+# PERSON2="Suresh KUMAR"
+# WRONG WAY  --> NO SPACE BEFORE AND AFTER '='
+# PERSON1 = "Ramesh KUMAR"  
+# PERSON2 = "Suresh KUMAR"
+# NO QUOTES CORERECT WAY
+# PERSON1=Ramesh
+# PERSON2=Suresh
+# NO QUOTES WRONG WAY
+# PERSON1 = Ramesh
+# PERSON2 = Suresh
