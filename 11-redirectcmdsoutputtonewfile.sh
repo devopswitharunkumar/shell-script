@@ -3,7 +3,7 @@
 ID=$(id -u)
 
 Timestamp=$(date +%F-%H-%M-%S)
-# LOG_FILE="/tmp/$0-$Timestamp.log"
+LOG_FILE="/tmp/$0-$Timestamp.log"
 
 
 validate(){
