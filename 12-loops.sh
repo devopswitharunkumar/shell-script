@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for iin [1..100]
+for i in {1..100}
 do
     echo "Current Number is : $i"
 done
