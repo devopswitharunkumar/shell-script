@@ -3,7 +3,7 @@
 ID=$(id -u)
 
 validate(){
-    if [ $1 -ne 0]
+    if [ $1 -ne 0 ]
     then
         echo "Error :: $2 is failed"
         exit 1
