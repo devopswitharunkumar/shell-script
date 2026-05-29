@@ -24,10 +24,10 @@ else
     echo "You are a root user"
 fi
 
-yum install mysql -y 
+yum install mysql -y &>> $LOG_FILE
 
 validate $? "Installing MYSQL"
 
-yum install git -y 
+yum install git -y &>> $LOG_FILE
 
 validate $? "Installing GIT" 
