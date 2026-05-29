@@ -2,8 +2,8 @@
 
 ID=$(id -u)
 
-Timestamp=$(date +%F-%H-%M-%S)
-LOG_FILE= "/tmp/$0-$Timestamp.log"
+# Timestamp=$(date +%F-%H-%M-%S)
+# LOG_FILE= "/tmp/$0-$Timestamp.log"
 
 validate(){
     if [ $1 -ne 0 ]
@@ -23,10 +23,10 @@ else
     echo "You are a root user"
 fi
 
-yum install mysql -y & >> $LOG_FILE
+yum install mysql -y 
 
-validate $? "Installing MYSQL" & >> $LOG_FILE
+validate $? "Installing MYSQL"
 
-yum install git -y & >> $LOG_FILE
+yum install git -y 
 
-validate $? "Installing GIT" & >> $LOG_FILE
+validate $? "Installing GIT" 
