@@ -29,10 +29,10 @@ else
     echo -e "$G You are a root user $N"
 fi
 
-yum install mysql -y &>> $LOG_FILE
+yum install mysqsdl -y &>> $LOG_FILE
 
 validate $? "Installing MYSQL"
 
-yum install git -y &>> $LOG_FILE
+yum install giddt -y &>> $LOG_FILE
 
 validate $? "Installing GIT" 
