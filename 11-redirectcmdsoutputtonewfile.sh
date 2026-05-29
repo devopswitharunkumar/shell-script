@@ -5,14 +5,18 @@ ID=$(id -u)
 Timestamp=$(date +%F-%H-%M-%S)
 LOG_FILE="/tmp/$0-$Timestamp.log"
 
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+
 
 validate(){
     if [ $1 -ne 0 ]
     then
-        echo "Error :: $2 is failed"
+        echo -e "Error :: $2 is $R failed"
         exit 1
     else
-        echo "$2 is successful"
+        echo -e "$2 is $G successful"
     fi
 }
 
