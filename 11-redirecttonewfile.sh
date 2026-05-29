@@ -2,6 +2,16 @@
 
 ID=$(id -u)
 
+validate(){
+    if [ $1 -ne 0]
+    then
+        echo "Error :: $2 is failed"
+        exit 1
+    else
+        echo "$2 is successful"
+    fi
+}
+
 if [ $ID -ne 0 ]
 then 
     echo "ERROR :: You are nnot a root user. Pls get the access"
@@ -12,20 +22,8 @@ fi
 
 yum install mysql -y
 
-if [ $? -ne 0 ]
-then 
-    echo "ERROR :: Installing is failed"
-    exit 1
-else
-    echo "Installing is successful"
-fi
+validate $? "Installing MYSQL"
 
 yum install git -y 
 
-if [ $? -ne 0 ]
-then 
-    echo "ERROR :: Installing git is failed"
-    exit 1
-else
-    echo "Installing  git is successful"
-fi
+validate $? "Installing GIT"
