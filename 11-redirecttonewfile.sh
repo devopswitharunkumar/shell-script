@@ -3,8 +3,8 @@
 ID=$(id -u)
 
 Timestamp=$(date +%F-%H-%M-%S)
-echo "time stamp is $Timestamp"
-# LOG_FILE= "/tmp/$0-$Timestamp.log"
+LOG_FILE="/tmp/$0-$Timestamp.log"
+echo "log file is $LOG_FILE"
 
 validate(){
     if [ $1 -ne 0 ]
