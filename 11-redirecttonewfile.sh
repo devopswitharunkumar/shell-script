@@ -4,7 +4,7 @@ ID=$(id -u)
 
 Timestamp=$(date +%F-%H-%M-%S)
 LOG_FILE="/tmp/$0-$Timestamp.log"
-echo "log file is $LOG_FILE"
+
 
 validate(){
     if [ $1 -ne 0 ]
@@ -24,7 +24,7 @@ else
     echo "You are a root user"
 fi
 
-yum install mysql -y 
+yum install mysql -y &>> $LOG_FILE
 
 validate $? "Installing MYSQL"
 
