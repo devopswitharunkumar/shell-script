@@ -40,6 +40,6 @@ do
         yum install $package -y &>> $LOG_FILE
         validate $? "Installing $package"
     else 
-        echo -e "$Y $package is already installed So SKIPPing the package $N"
+        echo -e "$Y $package is already installed So SKIPPED $N"
     fi
 done
