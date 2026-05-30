@@ -25,7 +25,7 @@ validate(){
         echo -e "$R $2 is failed $N"
     else
         echo -e "$G $2 is successful $N"
-    }
+}
 
 #echo "All arguments passed : $@"
 #if i want to insttall multiple packages with the help of loops,
