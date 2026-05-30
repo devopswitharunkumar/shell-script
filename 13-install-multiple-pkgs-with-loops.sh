@@ -11,7 +11,7 @@ N="\e[0m"
 Timestamp=$(date +%F-%H-%M-%S)
 LOG_FILE="/tmp/$0-$Timestamp.log"
 
-if [ $ID -ne 0]
+if [ $ID -ne 0 ]
 then
     echo -e "$R ERROR :: please run with root user or sudo $N"
     exit 1
@@ -20,11 +20,12 @@ else
 fi
 
 validate(){
-    if [ $1 -ne 0]
+    if [ $1 -ne 0 ]
     then
         echo -e "$R $2 is failed $N"
     else
         echo -e "$G $2 is successful $N"
+    fi
 }
 
 #echo "All arguments passed : $@"
