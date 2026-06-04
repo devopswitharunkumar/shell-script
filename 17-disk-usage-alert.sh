@@ -1,6 +1,6 @@
 #!/bin/bash
 
-Disk_usage=$(df -hT | grep -vE 'tmp/File')
+Disk_usage=$(df -hT | grep -vE 'tmp/Filesystem')
 
 Disk_Thresold=1
 
