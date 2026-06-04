@@ -40,6 +40,6 @@ do
 done <<< "$Disk_usage"
 
 
-echo -e "Message: $message" | mail -s "message" arunkumarreddynarupalle@gmail.com
+#echo -e "Message: $message" | mail -s "message" arunkumarreddynarupalle@gmail.com
 
 sh mail.sh "DevOps Team" "High Disk Usage" "$message" "arunkumarreddynarupalle@gmail.com" "Alert High Disk Usage"
