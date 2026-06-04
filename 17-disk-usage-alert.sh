@@ -40,4 +40,4 @@ do
 done <<< "$Disk_usage"
 
 
-echo -e "Message: $message"
+echo -e "Message: $message" | mail -s "message" arunkumarreddy261@gmail.com
