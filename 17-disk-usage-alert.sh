@@ -8,7 +8,7 @@ message=""
 
 while IFS= read line
 do
-    usage=$(echo $line | awk '{print $6F}' | cut -d % 1F)
+    usage=$(echo $line | awk '{print $6F}' | cut -d % -f1)
     partition=$(echo $line | awk '{print $1F}')
     if [ $usage -ge $Disk_Thresold ]
     then 
