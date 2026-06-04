@@ -1,0 +1,14 @@
+#!/bin/bash
+
+TO_TEAM=$1
+ALERT_TYPE=$2
+TO_ADDRESS=$4
+SUBJECT=$5
+
+ESCAPED_BODY=$(printf '%s\n' "$BODY" | sed -e 's/[]\/$*.^[]/\\&/g');
+
+
+FINAL_BODY=$(sed -e "s/TO_TEAM/$TO_TEAM/g" -e "s/ALERT_TYPE/$ALERT_TYPE/g" -e "s/BODY/$ESCAPED_BODY/g" template.html)
+
+
+echo "$FINAL_BODY" | mail -s "$(echo -e "$SUBJECT\nContent-Type: text/html")" "$TO_ADDRESS"

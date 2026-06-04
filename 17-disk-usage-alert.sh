@@ -34,10 +34,12 @@ do
 
     if [ $usage -ge $Disk_Thresold ]
     then
-        message+="High Disk Usage on $partition: $usage%\n"
+        message+="High Disk Usage on $partition: $usage% <br>"
     fi
 
 done <<< "$Disk_usage"
 
 
 echo -e "Message: $message" | mail -s "message" arunkumarreddynarupalle@gmail.com
+
+sh mail.sh "DevOps Team" "High Disk Usage" "#message" "arunkumarreddynarupalle@gmail.com" "Alert High Disk Usage"
