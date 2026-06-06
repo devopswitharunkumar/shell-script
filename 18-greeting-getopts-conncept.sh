@@ -7,9 +7,9 @@ Wishes=""
 Usage(){
     echo "Usage : $(basename $0) -n <name> -w <wishes>"
     echo  "Options::"
-    echo " -n Specify the name (mandatory)"
-    echo " -w Specify the wishes. (Optional). Default is Good Morning"
-    echo " -h Display help and exit"
+    echo " -n, Specify the name (mandatory)"
+    echo " -w, Specify the wishes. (Optional). Default is Good Morning"
+    echo " -h, Display help and exit"
 }
 
 
@@ -20,7 +20,7 @@ Usage(){
 # done
 
 # or
-while getopts "n:w:h" opt; do
+while getopts ":n:w:h" opt; do
     case $opt in
         n) Name=$OPTARG;;
         W) Wishes=$OPTARG;;
