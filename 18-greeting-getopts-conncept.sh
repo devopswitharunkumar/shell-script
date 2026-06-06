@@ -32,7 +32,7 @@ done
 
 
 
-if [ -z "$name" ] | [ -z "$Wishes"];  then
+if [ -z "$name" ] || [ -z "$Wishes"];  then
     echo "Error : -n and -w are mandatory options"
     Usage
     exit
