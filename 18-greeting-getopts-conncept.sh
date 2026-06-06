@@ -23,7 +23,7 @@ Usage(){
 while getopts ":n:w:h" opt; do
     case $opt in
         n) Name="$OPTARG";;
-        W) Wishes="$OPTARG";;
+        w) Wishes="$OPTARG";;
         \?) echo "Invalid options: -"$OPTARG"" >&2; Usage; exit;;
         :) Usage; exit;;
         h) Usage; exit;;
@@ -33,9 +33,9 @@ done
 
 
 if [ -z "$Name" ] || [ -z "$Wishes" ];  then
-    echo "Error : -n and -w are mandatory options"
+    echo "Error : Both -n and -w are mandatory options"
     Usage
     exit
 fi
 
-echo "Hello $Name, $Wishes. I have been learning DevOps Course"
+echo "Hello $Name, $Wishes. I have been learning DevOps Course."
