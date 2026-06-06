@@ -1,7 +1,8 @@
 #!/bin/bash
 
 Name=""
-Wishes=""
+#Wishes=""    #--> user must provide this value no default value
+Wishes="Good Morning"  #--> by default value 
 
 
 Usage(){
@@ -31,11 +32,17 @@ while getopts ":n:w:h" opt; do
 done
 
 
+#if both are mandatory 
+#if [ -z "$Name" ] || [ -z "$Wishes" ];  then
+#echo "Error : Both -n and -w are mandatory options"
+#only name is mandatory
 
-if [ -z "$Name" ] || [ -z "$Wishes" ];  then
-    echo "Error : Both -n and -w are mandatory options"
+if [ -z "$Name" ];  then
+    echo "Error : -n is mandatory option" 
     Usage
     exit
 fi
 
 echo "Hello $Name, $Wishes. I have been learning DevOps Course."
+
+#run like this ---> sudo sh 18-greeting-getopts-conncept.sh -n "Arun" -w "Good Evening"
