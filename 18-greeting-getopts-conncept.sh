@@ -46,3 +46,4 @@ fi
 echo "Hello $Name, $Wishes. I have been learning DevOps Course."
 
 #run like this ---> sudo sh 18-greeting-getopts-conncept.sh -n "Arun" -w "Good Evening"
+#run like this ---> sudo sh 18-greeting-getopts-conncept.sh -n "Arun" --> only n is mandatory
